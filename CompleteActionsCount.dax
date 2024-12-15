@@ -1,0 +1,13 @@
+Contagem de AçõesCompletas = 
+COUNTROWS(
+    FILTER(
+        SUMMARIZE(
+            Modificada,
+            Modificada[Ação]
+        ),
+        CALCULATE(
+            COUNTROWS(Modificada),
+            Modificada[Status Ação] = "Completa"
+        ) > 0
+    )
+)
