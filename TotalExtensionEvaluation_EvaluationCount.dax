@@ -1,0 +1,6 @@
+ExtTotalVist = SUM(
+    Modificada[Extensão]
+    )
+
+
+QtdeViagens = COUNTROWS(Modificada)

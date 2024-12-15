@@ -1,0 +1,6 @@
+TotalAcoesCompletas = CALCULATE(
+    DISTINCTCOUNT(Modificada[Ação]),
+    FILTER(
+        Modificada,
+        Modificada[Status Ação] = "Completa"
+    )

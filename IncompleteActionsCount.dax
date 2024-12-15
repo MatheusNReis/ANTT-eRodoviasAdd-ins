@@ -1,0 +1,12 @@
+COUNTROWS(
+    FILTER(
+        SUMMARIZE(
+            Modificada,
+            Modificada[Ação]
+        ),
+        CALCULATE(
+            COUNTROWS(Modificada),
+            Modificada[Status Ação] = "Incompleta"
+        ) > 0
+    )
+)

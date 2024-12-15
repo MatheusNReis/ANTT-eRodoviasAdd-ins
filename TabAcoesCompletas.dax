@@ -1,0 +1,13 @@
+TabAcoesCompletas = 
+ SUMMARIZE(
+    FILTER(
+        Modificada,
+        Modificada[Concessionária] <> BLANK() &&
+        Modificada[Ação] <> BLANK() &&
+        Modificada[Status Ação] = "Completa"
+    ),
+    Modificada[Ação],
+    "Concessionária", MAX(Modificada[Concessionária]),  // Não há problema em agupar pela função MAX pois os dados de Concessionária, Status Plano e COROD só repetem por Plano
+    "Status Plano", MAX(Modificada[Status Ação]),
+    "COROD", MAX(Modificada[COROD])
+)
