@@ -1,0 +1,4 @@
+ExtAcoesCompletas = CALCULATE(
+    SUM(Modificada[Extensão]),
+    FILTER(Modificada,Modificada[Status Ação]="Completa")
+)
