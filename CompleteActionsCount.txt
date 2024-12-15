@@ -1,3 +1,5 @@
+
+```dax
 Contagem de AçõesCompletas = 
 COUNTROWS(
     FILTER(
